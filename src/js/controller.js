@@ -10,7 +10,6 @@ import paginationView from './view/paginationView.js';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import { async } from 'regenerator-runtime';
 const recipeContainer = document.querySelector('.recipe');
 
 // https://forkify-api.herokuapp.com/v2
@@ -150,6 +149,10 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const note = function () {
+  console.log('welcome');
+};
+
 // controlSearchResult();
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
@@ -159,6 +162,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResult);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  note();
 };
 
 init();
